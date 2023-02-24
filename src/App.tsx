@@ -27,7 +27,7 @@ function App() {
               <Route path="/pokemon" element={<PrivateRoute> <Pokemon /> </PrivateRoute>} />
               <Route path="/" element={ <PublicRoutes> <Home /> </PublicRoutes> } />
               <Route path="/login" element={<PublicRoutes> <Login /> </PublicRoutes>} />
-              <Route path="/register" element={<PrivateRoute> <Register /> </PrivateRoute>} />
+              <Route path="/register" element={<PublicRoutes> <Register /> </PublicRoutes>} />
               <Route path="/pokemon/:id" element={<PrivateRoute> <Details /> </PrivateRoute>} />
             </Routes>
         <Toaster />
