@@ -1,8 +1,11 @@
+import { Button } from "@mui/material";
 import React from "react";
 
 import { useNavigate } from "react-router-dom";
 import { routing } from "../../routing";
 import { auth } from "../../utils/firebase";
+
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Logout = () => {
   const navigate = useNavigate();
@@ -12,7 +15,7 @@ const Logout = () => {
     navigate(routing.public);
   }
 
-  return <button onClick={logoutUser}>Logout</button>;
+  return <Button endIcon={<LogoutIcon />} sx={{color: "white"}} onClick={logoutUser}>Logout</Button>;
 };
 
 export default Logout;
