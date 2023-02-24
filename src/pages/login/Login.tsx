@@ -51,7 +51,7 @@ const Login = () => {
       </div>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.title}>{t("welcome")}</div>
-        <div className={styles.subtitle}>{t("loginHere")}</div>
+        <div className={styles.subtitle}>Login Here, fellow Pokémon trainer!</div>
         <div className={styles.inputContainer}>
           <input
             onChange={(e) => setEmail(e.target.value)}
