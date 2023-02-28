@@ -14,6 +14,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import PublicRoutes from "./utils/PublicRoutes";
 import DrawerAppBar from "./components/appbar/AppBar";
 import Details from "./pages/details/Details";
+import Regions from "./pages/regions/Regions";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
               <Route path="/login" element={<PublicRoutes> <Login /> </PublicRoutes>} />
               <Route path="/register" element={<PublicRoutes> <Register /> </PublicRoutes>} />
               <Route path="/pokemon/:id" element={<PrivateRoute> <Details /> </PrivateRoute>} />
+              <Route path="/regions" element={<PrivateRoute> <Regions /> </PrivateRoute>} />
             </Routes>
         <Toaster />
       </Suspense>

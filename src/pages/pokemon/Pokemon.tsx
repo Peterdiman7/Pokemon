@@ -43,8 +43,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -55,8 +55,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -64,11 +64,12 @@ const Pokemon = () => {
         >
           Johto
         </Button>
+
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -79,8 +80,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -91,8 +92,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -103,8 +104,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -115,8 +116,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -127,8 +128,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -139,8 +140,8 @@ const Pokemon = () => {
         <Button
           sx={{
             marginLeft: "10px",
-            backgroundColor: "aqua",
-            color: "darkblue",
+            backgroundColor: "#EFDBB6",
+            color: "#332011",
           }}
           className={styles.regionBtn}
           variant="contained"
@@ -153,13 +154,16 @@ const Pokemon = () => {
         {poke.map((p) => (
           <Grid key={p.name} item sx={{ xs: 1, padding: 6 }}>
             <motion.div
-            onClick={() => navigate(`/pokemon/${pokeId(p.url)}`)}
+              onClick={() => navigate(`/pokemon/${pokeId(p.url)}`)}
               whileHover={{ scale: 1.2 }}
               whileTap={{
                 scale: 0.8,
               }}
             >
-              <Card sx={{ width: 200, border: 1, borderRadius: 10 }}>
+              <Card
+                elevation={10}
+                sx={{ width: 200, border: 1, borderRadius: 10 }}
+              >
                 <CardMedia
                   sx={{ borderBottom: 0.5 }}
                   component="img"
