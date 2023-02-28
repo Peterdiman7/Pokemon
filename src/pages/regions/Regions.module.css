@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.description {
+    font-family: "Quicksand", "sans-serif";
+    text-align: center;
+}
+
+.regionBtn {
+    font-family: "Quicksand", "sans-serif" !important;
+    font-weight: 400 !important;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .regionBtn:hover {
+    cursor: pointer;
+    background-color: #FCF3E4 !important;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .regionBtn {
+      width: 250px;
+      margin-bottom: 10px !important;
+    }
+  }
+  

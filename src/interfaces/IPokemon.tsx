@@ -10,3 +10,8 @@ export interface ISinglePokemon {
   order: number,
   height: number
 };
+
+export interface IRegion {
+  name: string, 
+  url: string
+};

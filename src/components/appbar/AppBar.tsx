@@ -39,7 +39,7 @@ function DrawerAppBar() {
           <ListItemButton onClick={() => navigate(routing.pokemon)} sx={{ textAlign: "center" }}>Pokemon</ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: "center" }}>Not Pokemon</ListItemButton>
+          <ListItemButton onClick={() => navigate(routing.regions)} sx={{ textAlign: "center" }}>Regions</ListItemButton>
         </ListItem>
       </List>
     </Box>
@@ -49,7 +49,7 @@ function DrawerAppBar() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav">
-        <Toolbar>
+        <Toolbar sx={{backgroundColor: "#C5915D"}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -68,7 +68,7 @@ function DrawerAppBar() {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button onClick={() => navigate(routing.pokemon)} sx={{ color: "#fff" }}>Pokédex</Button>
-            <Button sx={{ color: "#fff" }}>Pokémon</Button>
+            <Button onClick={() => navigate(routing.regions)} sx={{ color: "#fff" }}>Regions</Button>
             <Button sx={{ color: "#fff" }}>Pokémon</Button>
         <Logout />
           </Box>
@@ -87,6 +87,7 @@ function DrawerAppBar() {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "white"
             },
           }}
         >
