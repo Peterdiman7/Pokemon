@@ -20,6 +20,11 @@
     background-color: #FCF3E4 !important;
   }
   
+.locationContainer {
+  margin: auto;
+  padding-top: 50px;
+}
+
   @media screen and (max-width: 992px) {
     .button-group {
       display: flex;

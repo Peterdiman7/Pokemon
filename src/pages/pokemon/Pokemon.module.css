@@ -14,6 +14,15 @@
   background-color: #FCF3E4 !important;
 }
 
+.image{
+  display: block;
+  margin: auto;
+  border-radius: 24px;
+  margin-top: 20px;
+  height: 80vh;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 992px) {
   .button-group {
     display: flex;

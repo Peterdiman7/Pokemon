@@ -37,15 +37,15 @@ const Details = () => {
 
   return (
     <div>
-      <Button onClick={() => navigate(routing.pokemon)} startIcon={<ArrowBackIosIcon />} variant="outlined">Go Back</Button>
-      <Card sx={{ maxWidth: 245, height: 320, margin: "auto" }}>
+      <Button sx={{ backgroundColor: "#C5915D" }} onClick={() => navigate(routing.pokemon)} startIcon={<ArrowBackIosIcon />} variant="contained">Go Back</Button>
+      <Card elevation={4} sx={{ maxWidth: 245, height: 320, margin: "auto" }}>
       <CardMedia
         sx={{ height: 140 }}
         image={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
         title={singlePokemon.name}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography style={{ fontFamily: "Quicksand" }} gutterBottom variant="h5" component="div">
         Name: {singlePokemon.name[0]?.toUpperCase() + singlePokemon.name.slice(1)}
         </Typography>
         <Typography className={styles.captions} variant="caption" sx={{color: "black"}}>
@@ -54,7 +54,7 @@ const Details = () => {
         <Typography className={styles.captions} variant="caption" sx={{color: "black"}}>
         Height: {singlePokemon.height} feet
         </Typography>
-        <a className={styles.anchor} href={`https://www.google.com/search?q=${singlePokemon.name}`} target="_blank" rel="noreferrer" >Click here for Additional Information</a>
+        <a style={{ fontFamily: "Quicksand" }} className={styles.anchor} href={`https://www.google.com/search?q=${singlePokemon.name}`} target="_blank" rel="noreferrer" >Click here for Additional Information</a>
       </CardContent>
     </Card>
     </div>
