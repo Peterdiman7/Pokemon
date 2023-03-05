@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import { pokeId } from "../../utils/arrSplit";
 import { useNavigate } from "react-router-dom";
 import { IPokemon } from "../../interfaces/IPokemon";
+import { images } from "../../data/data";
 
 const Pokemon = () => {
   const url = `https://pokeapi.co/api/v2/pokemon/`;
@@ -23,6 +24,20 @@ const Pokemon = () => {
 
   const [poke, setPoke] = useState<Array<IPokemon>>([]);
   const [region, setRegion] = useState("");
+  const [image, setImage] = useState("");
+
+  const pickRandomImage = () => {
+    const movieArr = Object.keys(images);
+    const randomNumber = Math.floor(Math.random() * movieArr.length);
+    setImage(images[movieArr[randomNumber]]);
+    setTimeout(() => {
+      pickRandomImage()
+    }, 6000);
+  }
+
+  useEffect(() => {
+    pickRandomImage();
+  }, [])
 
   useEffect(() => {
     const fetchPokemon = async () => {
@@ -150,6 +165,8 @@ const Pokemon = () => {
           Paldea
         </Button>
       </div>
+      {!region ? <img className={styles.image} src={image} alt="" />
+    :  
       <Grid container sx={{ justifyContent: "center" }}>
         {poke.map((p) => (
           <Grid key={p.name} item sx={{ xs: 1, padding: 6 }}>
@@ -175,6 +192,7 @@ const Pokemon = () => {
                 />
                 <CardContent>
                   <Typography
+                  sx={{ fontFamily: "Quicksand" }}
                     key={p.name}
                     gutterBottom
                     variant="h5"
@@ -191,6 +209,7 @@ const Pokemon = () => {
           </Grid>
         ))}
       </Grid>
+    }
     </>
   );
 };

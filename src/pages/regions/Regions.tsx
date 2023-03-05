@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Button, dividerClasses, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -137,13 +137,19 @@ const Regions = () => {
           Paldea
         </Button>
       </div>
-      <span>
+      <div className={styles.locationContainer}>
+        {currentRegion === "" ? 
+        ""
+        :
+        <div style={{ textAlign: "center", fontFamily: "Quicksand" }}>Top 10 locations to see in {currentRegion.toUpperCase()}: </div>
+      }
         {region?.length === 0 ? (
-          <div>No locations to show!</div>
+          <div style={{ textAlign: "center", fontFamily: "Quicksand" }}>No locations to show!</div>
         ) : (
-          region && region.slice(0, 10).map((item) => <div>{item.name}</div>)
+          region && region.slice(0, 10).map((item) =>
+          <Paper elevation={5} sx={{ textAlign: "center", width: "30%", margin: "auto", marginTop: "10px", height: "70px", fontFamily: "Quicksand" }}>{(item.name).toUpperCase()}</Paper>)
         )}
-      </span>
+      </div>
     </>
   );
 };
